@@ -4,7 +4,9 @@
 */
 
 //CODE HERE
-let arr = ['hi', 67, true];
+let str = 'hi';
+let nm = 6;
+let bool = true;
 
 // ***** Array ***** //
 /*
@@ -26,14 +28,16 @@ console.log(codingLanguages[2]);
 */
 
 //CODE HERE
-
+let codingLanguages2 = codingLanguages.slice(0, codingLanguages.length);
+console.log(codingLanguages2);
 
 /* 
     Add another coding language to the codingLanguage2 array.
 */
 
 //CODE HERE
-
+codingLanguages2.push('ruby');
+console.log(codingLanguages2);
 
 // !!! Don't edit the code below !!! //
 let instruments = ['piano', 'trumpet', 'xylophone', 'flute', 'cello']
@@ -44,29 +48,32 @@ let instruments = ['piano', 'trumpet', 'xylophone', 'flute', 'cello']
 */
 
 //CODE HERE
-
+instruments.pop();
+console.log(instruments);
 
 /* 
     Use a built-in array function to remove 'piano' from the instruments array
 */
 
 //CODE HERE
-
+instruments.shift();
+console.log(instruments);
 
 /* 
     Use a built-in array function to add 'guitar' to the front of the instruments array
 */
 
 //CODE HERE
-
+instruments.unshift('guitar');
+console.log(instruments);
 
 /* 
     Use a built-in array function to replace 'xylophone' in the instruments array to 'glockenspiel.'
 */
 
 //CODE HERE
-
-
+instruments.splice(2, 1, 'glockenspiel');
+console.log(instruments);
 
 // ***** if-else ***** //
 /* 
@@ -83,7 +90,11 @@ let num = 11;
 */
 
 //CODE HERE
-
+if (num % 2 === 0) {
+    console.log(num);
+} else {
+    console.log(num + ' is not an even number.');
+};
 
 // !!! Don't edit the code below !!! //
 let score = 83;
@@ -98,7 +109,15 @@ let score = 83;
 */
 
 //CODE HERE
-
+if (score <= 10) {
+    console.log('Failed.');
+} else if (score > 10 && score < 41) {
+    console.log('The grade is C.');
+} else if (score > 40 && score < 71) {
+    console.log('The grade is B.');
+} else if (score > 70) {
+    console.log('The grade is an A.');
+};
 
 
 // ***** For Loop ***** //
@@ -115,14 +134,19 @@ let price = [10, 5, 6];
 */
 
 //CODE HERE
+let ttlPrc = 0;
 
+for (let i = 0; i < price.length; i++) {
+    ttlPrc += price[i];
+};
 
+console.log(ttlPrc);
 
 /* 
     Using the 'totalPrice,' find the average of 'price.'
 */
 
-
+console.log(`The average price is ${ttlPrc / price.length}.`);
 
 // !!! Don't edit the code below !!! //
 let colors = ['red', 'green', 'yellow', 'red', 'green']
@@ -133,7 +157,21 @@ let colors = ['red', 'green', 'yellow', 'red', 'green']
 */
 
 // CODE HERE
-
+for (let i = 0; i < colors.length; i++) {
+    switch (colors[i]) {
+        case 'red':
+            console.log('apple');
+            break;
+        case 'green':
+            console.log('melon');
+            break;
+        case 'yellow':
+            console.log('banana');
+            break;
+        default:
+            console.log('We dont have any fruit in that color');
+    };
+};
 
 
 // ***** Software Development Life Cycle (SDLC) ***** //
@@ -151,14 +189,13 @@ let colors = ['red', 'green', 'yellow', 'red', 'green']
 /* 
     Discuss:
     - Definition of:
-        -- git
-        -- github
-        -- git init
-        -- git clone
-        -- git status
-        -- git add
-        -- git commit
-        -- git push
+        -- git: a software that allows version control and backup of code
+        -- github: a website meant for storing snapshots of our code
+        -- git init: add a git file to a folder allowing git to track files
+        -- git clone: clones a repository
+        -- git status: allows you to view how files being tracked by git have (or havent) been modifies and are ready for a commit
+        -- git add: prepares files to be committed to a snapshot 
+        -- git commit: stores a snapshot of a file along with a message explaining whats new with said file
+        -- git push: adds your commits to github
     - How to push git to github
 */
-
